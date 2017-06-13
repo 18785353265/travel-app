@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>限时特卖</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="css/publiheader.css">
+	<link rel="stylesheet" type="text/css" href="css/xianshitemai.css">
+</head>
+<body>
+<!-- 头部 -->
+	<div class="header">
+		<div class="logo"><a href="index.html"><img src="images/home.png" /></a></div>
+		<div class="wenzi"><a href="index.html">限时特卖</a></div>
+		<div class="user"><a href="index.html"><img src="images/goback.png" /></a><a href="login.html"><img src="images/userlogin.png" /></a></div>
+	</div>
+<!-- content -->
+	<div class="content">
+		<ul class="liebiao">
+			<li  class="set">周边</li>
+			<li>国内</li>
+			<li>出境</li>
+			<li><a href="zijiatemai.html">自驾</a></li>
+		</ul>
+		<ul class="ms">
+			<li>
+				<a href="#"><img src="images/ms1.jpg" /></a>
+				<div class="jieshao">
+					<span>腾冲</span>
+					<p>昆明芒市腾冲瑞丽3飞6日游 当地特色五星住宿 无强制消费</p>
+				</div>
+				<div class="jiage">
+					<div class="jiage_left"><p>￥980起</p></div>
+					<div class="jiage_right">剩余时间：3天以上</div>
+				</div>
+			</li>
+			<li>
+				<a href="#"><img src="images/ms2.jpg" /></a>
+				<div class="jieshao">
+					<span>丽江</span>
+					<p>昆明、大理、丽江双飞六日游</p>
+				</div>
+				<div class="jiage">
+					<div class="jiage_left"><p>￥380起</p></div>
+					<div class="jiage_right">剩余时间：3天以上</div>
+				</div>
+			</li>
+			<li>
+				<a href="#"><img src="images/ms3.jpg" /></a>
+				<div class="jieshao">
+					<span>版纳</span>
+					<p>昆明普洱西双版纳双飞6日游 全程无自费</p>
+				</div>
+				<div class="jiage">
+					<div class="jiage_left"><p>￥480起</p></div>
+					<div class="jiage_right">剩余时间：3天以上</div>
+				</div>
+			</li>
+			<li>
+				<a href="#"><img src="images/ms4.jpg" /></a>
+				<div class="jieshao">
+					<span>柬埔寨</span>
+					<p>柬埔寨吴哥5天3夜（9c直飞，当四酒店下午茶+1餐自助餐——免税店）</p>
+				</div>
+				<div class="jiage">
+					<div class="jiage_left"><p>￥2849起</p></div>
+					<div class="jiage_right">剩余时间：1天7时2分20秒</div>
+				</div>
+			</li>
+			<li>
+				<a href="#"><img src="images/ms5.jpg" /></a>
+				<div class="jieshao">
+					<span>桂林</span>
+					<p>桂林—+阳朔4天，超值游，小漓江升级桂林2晚5星酒店 无自费 全程0购物压力 当地特色五星住宿 无强制消费</p>
+				</div>
+				<div class="jiage">
+					<div class="jiage_left"><p>￥1299起</p></div>
+					<div class="jiage_right">剩余时间：3天以上</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+<!-- 底部 -->
+<div class="footer">
+		<div class="menu">
+			<div>
+				<ul class="menu2">
+					<li><a href="miaosha.html">清仓秒杀</a></li>
+					<li><a href="tuijian.html">每次推荐</a></li>
+					<li><a href="xianshitemai.html">限时特卖</a></li>
+					<li><a href="lvyousearch.html">旅游搜索</a></li>
+				</ul>
+				<a href="#" class="menu1"><img src='images/coin.png'/>小二推荐</a>
+			</div>
+			<div class="menu_kk">
+				<ul class="menu2">
+					<li><a href="zijiatemai.html">自驾特卖</a></li>
+					<li><a href="rendain.html">当季热点</a></li>
+					<li><a href="xianshitemai.html">限时抢购</a></li>
+										<li><a href="paihangbang.html">排行榜</a></li>
+				</ul>
+				<a href="#" class="menu1"><img src='images/coin.png'/>旅游超市</a>
+			</div>
+			<div>
+				<ul class="menu2">
+					<li><a href="linezixun.html">在线咨询</a></li>
+					<li><a href="login.html">我的订单</a></li>
+					<li><a href="paihangbang.html">排行榜</a></li>
+					<li><a href="zhoumoshuaidan.html">周末尾单</a></li>
+				</ul>
+				<a href="#" class="menu1"><img src='images/coin.png'/>订单处理</a>
+			</div>
+		</div>
+	</div>
+	<div class="fotter"></div>
+</body>
+	<script type="text/javascript" src='js/ziding_jquery.js'></script>
+	<script type="text/javascript" src='js/dibu.js'></script>
+	<script type="text/javascript" src='data/data.js'></script>
+	<script type="text/javascript">
+		$('.liebiao li').click(function(){
+			$($(this)).addClass("set").siblings().removeClass("set");
+			$('.ms').empty();
+			var index = $(this).index();
+			$.each(list.result[index], function(i,item) {
+				// console.log(list.result[index]);
+				// console.log(item.img);
+				var li = $('<li>\
+				<a href="#"><img src="'+item.img+'" /></a>\
+				<div class="jieshao">\
+					<span>'+item.td+'</span>\
+					<p>'+item.ms+'</p>\
+				</div>\
+				<div class="jiage">\
+					<div class="jiage_left"><p>'+item.price+'</p></div>\
+					<div class="jiage_right">'+item.time+'</div>\
+				</div>\
+			</li>')
+			$('.ms').append(li);
+			});
+	})
+	</script>
+	
+</html>
